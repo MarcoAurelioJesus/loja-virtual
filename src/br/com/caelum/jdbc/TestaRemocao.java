@@ -9,7 +9,7 @@ public class TestaRemocao {
 	public static void main(String[] args) throws SQLException {
 		Connection connection = new ConnectionPool().getConnection();
 		Statement statement = connection.createStatement();
-		statement.executeUpdate("delete from Produto where id>3");
+		statement.executeUpdate("delete from Produto where id > 5 ");
 		int updateCount = statement.getUpdateCount();
 		System.out.println(updateCount + " linhas atualizadas");
 		
